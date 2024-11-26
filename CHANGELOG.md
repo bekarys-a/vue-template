@@ -11,9 +11,11 @@ run npm create vue
 
 ## element plus
 
-npm install element-plus
-npm install -D unplugin-vue-components unplugin-auto-import
-npm install -D unplugin-vue-router
+npm i element-plus
+npm i -D unplugin-vue-components unplugin-auto-import
+npm i -D unplugin-vue-router
+npm i -D unplugin-icons
+npm i -D @iconify/json
 
 ## Version 0.0.1
 
