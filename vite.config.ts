@@ -16,6 +16,22 @@ const iconsResolver = IconsResolver({
 })
 
 export default defineConfig({
+  base: '/',
+  server: {
+    port: 6464,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5300',
+        changeOrigin: true
+        //rewrite: (path) => path.replace(/^\/api/, '')
+      },
+      '/swagger': {
+        target: 'http://localhost:5300',
+        changeOrigin: true
+        //rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  },
   plugins: [
     VueRouter({
       dts: `${generatedPath}/typed-router.d.ts`
